@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:circular_profile_avatar/circular_profile_avatar.dart';
+import 'package:getwidget/components/button/gf_button.dart';
+import 'package:getwidget/getwidget.dart';
 
 class AcceptInvite extends StatelessWidget {
   const AcceptInvite({super.key});
@@ -62,6 +65,93 @@ class AcceptInvite extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Card(
+              elevation: 10,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+              ),
+              child: Container(
+                height: 100,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(10, 20, 5, 15),
+                          child: Container(
+                            height: 60,
+                            width: 60,
+                            child: CircularProfileAvatar(
+                              "",
+                              backgroundColor: Colors.blue,
+                              radius: 35,
+                            ),
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                top: 5,
+                                bottom: 5,
+                              ),
+                              child: Text(
+                                "@Faizan9562",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 0,
+                              ),
+                              child: Text(
+                                "Faizan",
+                                style: GoogleFonts.poppins(
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              GFButton(
+                                color: Color(0xff00D7CC),
+                                shape: GFButtonShape.pills,
+                                onPressed: () {},
+                                child: Text("Accept"),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              GFButton(
+                                color: Color.fromARGB(255, 235, 51, 82),
+                                shape: GFButtonShape.pills,
+                                onPressed: () {},
+                                child: Text("Decline"),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
           /* Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
