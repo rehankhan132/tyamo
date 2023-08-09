@@ -46,7 +46,7 @@ class AuthHeading extends StatelessWidget {
             Text(
               subText,
               style: GoogleFonts.poppins(
-                  fontSize: 18,
+                  fontSize: fontSize,
                   color: const Color(0xff00205C),
                   fontWeight: FontWeight.bold),
             ),
