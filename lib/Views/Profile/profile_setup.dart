@@ -37,7 +37,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
                 "assets/images/profile_setup_bg.png",
@@ -51,7 +51,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
               alignment: Alignment.center,
               height: 50,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xff000221),
               ),
               child: Text(
@@ -64,7 +64,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             CircularProfileAvatar(
@@ -79,7 +79,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Padding(
@@ -92,7 +92,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                 obscureText: false,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -104,7 +104,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                   labelText: "Your username",
                   obscureText: false),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
@@ -124,13 +124,13 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       color: isMale ? Colors.cyan : Colors.grey,
                       shape: BoxShape.circle,
                       boxShadow: [
-                        BoxShadow(
+                        const BoxShadow(
                             color: Colors.black,
                             offset: Offset(1.0, 9.0),
                             blurRadius: 30),
                       ],
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.male,
                       color: Colors.white,
                     ),
@@ -150,14 +150,14 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       color: !isMale ? Colors.purple : Colors.grey,
                       shape: BoxShape.circle,
                       boxShadow: [
-                        BoxShadow(
+                        const BoxShadow(
                           color: Colors.black,
                           offset: Offset(1.0, 9.0),
                           blurRadius: 30,
                         ),
                       ],
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.female,
                       color: Colors.white,
                     ),
@@ -165,7 +165,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Container(
@@ -175,16 +175,16 @@ class _ProfileSetupState extends State<ProfileSetup> {
                 child: RoundedLoadingButton(
                   width: 2000,
                   borderRadius: 10,
-                  color: Color(0xff00C1AA),
+                  color: const Color(0xff00C1AA),
                   controller: profileSetupButtonController,
                   onPressed: () {
-                    Timer(Duration(seconds: 3), () {
+                    Timer(const Duration(seconds: 3), () {
                       profileSetupButtonController.success();
                       Navigator.push(
                         context,
                         PageTransition(
                           type: PageTransitionType.fade,
-                          child: InviteFriend(),
+                          child: const InviteFriend(),
                         ),
                       );
                     });

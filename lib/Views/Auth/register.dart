@@ -115,7 +115,7 @@ class Register extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   color: Colors.grey,
                   fontWeight: FontWeight.w600,
-                  fontSize: 8,
+                  fontSize: 11.sp,
                   letterSpacing: 0.5,
                 ),
               ),
@@ -145,7 +145,7 @@ class Register extends StatelessWidget {
                     "Sign In!",
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w800,
-                        fontSize: 14,
+                        fontSize: 14.sp,
                         color: Color(0xff2F76EA)),
                   ),
                 ),
