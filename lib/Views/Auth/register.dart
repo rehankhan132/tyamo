@@ -32,7 +32,7 @@ class Register extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(40),
           child: Column(children: [
             AuthHeading(
               mainText: "Sign Up to ",
